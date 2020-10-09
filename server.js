@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const productRoute = require('./routes/productRoute');
 const orderRoute = require('./routes/orderRoute');
 const {MONGODB_URL, PORT} = require('./config');
+const path = require('path');
 
 const app = express();
 app.use(bodyParser.json());
