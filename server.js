@@ -19,10 +19,10 @@ mongoose.connect(mongodbUrl, {
     useUnifiedTopology: true
 });
 
-app.use(express.static('build'));
+app.use(express.static('public'));
 app.get('*', (req, res) => {
 
-    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 });
 
 const port = process.env.PORT || PORT;
